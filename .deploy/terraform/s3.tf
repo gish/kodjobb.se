@@ -42,3 +42,11 @@ resource "aws_s3_object" "output_css" {
   content_type = "text/css"
   etag         = filemd5("./dist/output.css")
 }
+
+resource "aws_s3_object" "output_png" {
+  bucket       = aws_s3_bucket.website_bucket.id
+  key          = "designkod-og.png"
+  source       = "./dist/designkod-og.png"
+  content_type = "image/png"
+  etag         = filemd5("./dist/designkod-og.png")
+}
