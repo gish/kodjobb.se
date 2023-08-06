@@ -2,3 +2,4 @@ node_modules
 dist
 .terraform.lock.hcl
 .terraform
+.parcel-cache

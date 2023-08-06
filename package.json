@@ -1,15 +1,15 @@
 {
   "scripts": {
-    "build-css": "tailwindcss -i src/main.css -o dist/output.css",
-    "watch-css": "npm run build-css -- --watch",
-    "serve": "live-server dist --watch=src,dist",
-    "dev": "npm run build-css && concurrently \"npm run serve\" \"npm run watch-css\""
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "devDependencies": {
-    "concurrently": "^8.2.0",
-    "live-server": "^1.2.2",
+    "postcss": "^8.4.27",
     "prettier": "^2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0",
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "parcel": "^2.9.3"
   }
 }
