@@ -18,7 +18,7 @@ terraform {
 }
 
 module "website" {
-  source          = "./.deploy/terraform/"
+  source          = "./terraform/"
   domain_name     = var.domain_name
   certificate_arn = var.certificate_arn
 }
